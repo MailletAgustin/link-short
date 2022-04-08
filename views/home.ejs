@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acortador de Links privado</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="bulma.tooltip.min.css">
+    <link rel="stylesheet" href="bulma.quickview.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="hero is-danger is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-desktop is-vcentered">
+                    <div class="column">
+                        <!-- App tittle -->
+                        <p class="title">
+                            Short links, big results
+                        </p>
+                        <!-- App description -->
+                        <p class="subtitle">
+                            A URL shortener built with powerful tools to help you grow and protect your brand.
+                        </p>
+                        <!-- Get data from form -->
+                        <form id="generateLinkForm">
+                            <div class="field has-addons">
+                                <!-- Link field -->
+                                <div class="control">
+                                    <input type="url" required class="input is-info" placeholder="Ingrese el link a acortar" id="largeUrlField">
+                                </div>
+
+                                <!-- Submit button -->
+                                <div class="control">
+                                    <button type="submit" class="button is-info" data-show="quickview" data-target="linkPreviewQuickview">Acortar</button>
+                                </div>
+                            </div>
+
+                            <!-- Has password checkbox -->
+                            <label class="checkbox has-tooltip-bottom" data-tooltip="Tendrás que incluirla luego de pulsar Acortar">
+                                <input id="protectedCheckbox" type="checkbox">
+                                Protected with password?
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="column" id="characterAnimation">
+                        <lottie-player id="characterHelloAnimation" src="https://assets3.lottiefiles.com/temporary_files/2EMn10.json" mode="bounce" background="transparent"  speed="0.7"  style="width: 80%; height: auto; margin: auto;"   autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="linkPreviewQuickview" class="quickview">
+            <header class="quickview-header">
+                <h2>Wizard - Acortador de links</h2>
+                <span class="delete" data-dismiss="quickview"></span>
+            </header>
+          
+            <div class="quickview-body">
+              <div class="quickview-block">
+                
+              </div>
+            </div>
+          
+            <footer class="quickview-footer">
+          
+            </footer>
+          </div>
+    </section>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <script type="text/javascript" src="bulma.quickview.min.js"></script>
+      <script src="main.js"></script>
+</body>
+</html>
